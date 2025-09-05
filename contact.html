@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shades Up | Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Shades Up</a>
+            <nav class="site-nav" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Packages</a>
+                <a href="contact.html" class="nav-link btn-cta">Get a Quote</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact & Quote</h1>
+            <p>Fill out the form below or call us to get a quick quote.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Phone: <a href="tel:+14806255712">(480) 625-5712</a></p>
+                <p>Email: <a href="mailto:shadesup@example.com">shadesup@example.com</a></p>
+                <p>Hours: Mon–Fri 9am–6pm, Sat 9am–3pm</p>
+            </div>
+            <div class="contact-form">
+                <form action="mailto:shadesup@example.com" method="post" enctype="text/plain">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Vehicle Information & Comments</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Year/Make/Model, desired film, etc."></textarea>
+
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Shades Up</h4>
+                <p>Serving Phoenix, AZ and surrounding areas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Phone: <a href="tel:+14806255712">(480) 625-5712</a></li>
+                    <li>Email: <a href="mailto:shadesup@example.com">shadesup@example.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Shades Up. All rights reserved.
+        </div>
+    </footer>
+
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    navToggle.classList.toggle('open');
+});
+</script>
+</body>
+</html>
