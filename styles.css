@@ -301,7 +301,9 @@ body {
 }
 
 .contact-form label {
-    font-weight: 500;
+    /* Make labels bold and slightly larger for better readability on the quote page */
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .contact-form input,
@@ -310,19 +312,22 @@ body {
     /* Darker border to suit dark theme */
     border: 1px solid #444;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    /* Increase font size for inputs on the quote page to stand out */
+    font-size: 1.1rem;
     /* Ensure form text is visible on white backgrounds */
     color: var(--dark);
     /* Increase weight for better legibility on white inputs */
     font-weight: 700;
 }
 
-/* Ensure placeholder text in contact form fields is also dark for readability */
+/* Ensure placeholder text in contact form fields is also dark, bold, and slightly larger for readability */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: var(--dark);
     /* Bold placeholder text so field prompts are easy to read */
     font-weight: 700;
+    /* Increase font size for placeholders on the quote page */
+    font-size: 1.1rem;
 }
 
 .contact-form button {
