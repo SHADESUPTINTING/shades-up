@@ -40,7 +40,8 @@
                 <p>Hours: Mon–Fri 9am–6pm, Sat 9am–3pm</p>
             </div>
             <div class="contact-form">
-                <form action="mailto:Shadesuptinting@gmail.com" method="post" enctype="text/plain">
+                <!-- When the form is submitted, trigger sendSMS() and prevent default submission -->
+                <form onsubmit="sendSMS(); return false;">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
 
@@ -53,7 +54,8 @@
                     <label for="message">Vehicle Information & Comments</label>
                     <textarea id="message" name="message" rows="4" placeholder="Year/Make/Model, desired film, etc."></textarea>
 
-                    <button type="submit" class="btn-primary">Send</button>
+                    <!-- Send button triggers SMS submission -->
+                    <button type="submit" class="btn-primary">Send Quote as Text</button>
                 </form>
             </div>
         </div>
@@ -92,6 +94,22 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
     navToggle.classList.toggle('open');
 });
+
+// Function to send SMS with quote details
+function sendSMS() {
+    // Gather form data
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const vehicleInfo = document.getElementById('message').value;
+    // Build SMS body
+    let body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nVehicle Info: ${vehicleInfo}`;
+    body = encodeURIComponent(body);
+    // Replace with your phone number (include country code)
+    const smsLink = `sms:+14806255712?body=${body}`;
+    // Open SMS app
+    window.location.href = smsLink;
+}
 </script>
 </body>
 </html>
