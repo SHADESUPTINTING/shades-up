@@ -241,6 +241,9 @@ body {
 .package-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    /* Make package titles stand out */
+    font-weight: 700;
+    color: var(--dark);
 }
 
 .package-card .price {
@@ -308,6 +311,14 @@ body {
     border: 1px solid #444;
     border-radius: 0.25rem;
     font-size: 1rem;
+    /* Ensure form text is visible on white backgrounds */
+    color: var(--dark);
+}
+
+/* Ensure placeholder text in contact form fields is also dark for readability */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--dark);
 }
 
 .contact-form button {
