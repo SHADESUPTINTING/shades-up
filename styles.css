@@ -1,11 +1,12 @@
 :root {
-    --primary-color: #0f172a;
-    --secondary-color: #2563eb;
-    --accent-color: #64748b;
-    --text-color: #1f2937;
-    --background-color: #f9fafb;
+    /* Updated color scheme: black and red */
+    --primary-color: #000000;      /* base dark background for headers and footer */
+    --secondary-color: #dc2626;     /* bright red for primary actions and highlights */
+    --accent-color: #b91c1c;        /* darker red for hover states and accents */
+    --text-color: #f5f5f5;          /* light text to contrast against dark backgrounds */
+    --background-color: #000000;    /* overall page background */
     --light: #ffffff;
-    --dark: #0f172a;
+    --dark: #000000;
 }
 
 * {
@@ -88,7 +89,8 @@ body {
 
 /* Hero section */
 .hero {
-    background-image: linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(37, 99, 235, 0.8)), url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    /* Use a black to red gradient overlay for the hero section */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(220, 38, 38, 0.8)), url('https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&w=1600');
     background-size: cover;
     background-position: center;
     color: var(--light);
@@ -183,7 +185,8 @@ body {
 }
 
 .btn-secondary:hover {
-    background-color: #dbeafe;
+    /* Light red tint when hovering secondary buttons */
+    background-color: #fee2e2;
 }
 
 .btn-secondary.small {
@@ -301,7 +304,8 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 0.75rem;
-    border: 1px solid #e5e7eb;
+    /* Darker border to suit dark theme */
+    border: 1px solid #444;
     border-radius: 0.25rem;
     font-size: 1rem;
 }
