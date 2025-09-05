@@ -313,12 +313,16 @@ body {
     font-size: 1rem;
     /* Ensure form text is visible on white backgrounds */
     color: var(--dark);
+    /* Increase weight for better legibility on white inputs */
+    font-weight: 700;
 }
 
 /* Ensure placeholder text in contact form fields is also dark for readability */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: var(--dark);
+    /* Bold placeholder text so field prompts are easy to read */
+    font-weight: 700;
 }
 
 .contact-form button {
